@@ -16,7 +16,7 @@ class CompleteGraph(Graph) :
             
 if __name__ == "__main__":
     
-    # Create a graph with 5 vertices
+    # Create a graph with 3 vertices
     graph = CompleteGraph(3)
     
     # Add some edges

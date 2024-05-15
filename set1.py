@@ -7,32 +7,27 @@ class Set:
         self.size = len(set1)
 
     def isMemberOf(self,x):
-
         return True if x in self.set1 else False
     
     def setUnion(self,set2):
 
         self.set1 = self.set1.union(set2)
-
         print("Union of these two sets is: ")
         print(x for x in self.set1)
 
     def subset(self,subset_set:set):
-
         if self.set1.issubset(subset_set):
             return True
         else:
             return False
         
     def powerset(self):
-
         cardinality = (int)(math.pow(2,self.size))
         pow_set = set()
 
         lst = list(self.set1)
 
         for i in range(cardinality): #each subset
-
             subset = set() 
             # i -> 00.. -> 11....
 
@@ -40,16 +35,12 @@ class Set:
 
                 if (i & (1 << j) > 0): 
                     # loop: 1 << j -> creates all possible combinations of the binary nums, only the combination, whose & with the counter is > 0 (not 0), is added.
-
                     subset.add(lst[j])
 
             pow_set.update(subset)
-
-        
         return pow_set
     
     def intersection(self,set2:set):
-
         return self.set1.intersection(set2)
     
     def sdifference(self,set2:set):
